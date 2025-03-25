@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "/py/bin/python",
+  "python.analysis.extraPaths": ["/py/lib/python3.9/site-packages"]
+}
