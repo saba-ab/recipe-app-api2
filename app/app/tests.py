@@ -1,5 +1,6 @@
 from django.test import SimpleTestCase
-from app.calc import add, subtract, divide
+from app.calc import add, subtract, divide, multiply
+
 
 class CalcTest(SimpleTestCase):
     """Test the calc module."""
@@ -23,3 +24,15 @@ class CalcTest(SimpleTestCase):
 
         self.assertEqual(res, 5)
 
+    def test_divide_by_zero(self):
+        """Testing dividing by zero"""
+
+        with self.assertRaises(ZeroDivisionError):
+            divide(10, 0)
+
+    def test_multiply(self):
+        """Testing multiplying numbers"""
+
+        res = multiply(10, 2)
+
+        self.assertEqual(res, 20)
